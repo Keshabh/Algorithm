@@ -27,13 +27,15 @@ int main()
     //lets iterate over the matrix in diagonal fashion.
     for(int z=2;z<=n;z++)
     {
+        //for each value in the diagonal
         for(int i=0;i<n-z+1;i++)
         {
             int j=i+z-1;
             //k is from 1 to j-1.
             int cost=9999999;
             int pt_point=0;
-    
+            
+            //for each parenthesis point .
             for(int k=i;k<j;k++)
             {
                 int temp = M[i][k] + M[k+1][j] + p[i]*p[k]*p[j];
